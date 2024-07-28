@@ -1,6 +1,5 @@
-// src/controllers/noteController.mts
 import { Request, Response } from 'express';
-import pool from '../database.mts';
+import pool from '../database.js';
 
 export const getNotes = async (req: Request, res: Response) => {
   try {

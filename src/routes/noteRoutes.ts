@@ -1,6 +1,5 @@
-// src/routes/noteRoutes.mts
 import express from 'express';
-import { getNotes, saveNote, deleteNote } from '../controllers/noteController.mts';
+import { getNotes, saveNote, deleteNote } from '../controllers/noteController.js';
 
 const router = express.Router();
 

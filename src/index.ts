@@ -1,15 +1,19 @@
-// src/index.mts
-import dotenv from 'dotenv';
-dotenv.config();
-
 import express from 'express';
-import noteRoutes from './routes/noteRoutes.mts';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import noteRoutes from './routes/noteRoutes.ts';
+
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.json());
+app.use(cors());
+app.use(bodyParser.json());
+
 app.use('/api/notes', noteRoutes);
+
 app.use(express.static('public'));
 
 app.listen(port, () => {

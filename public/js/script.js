@@ -4,7 +4,7 @@ document.getElementById('save-note').addEventListener('click', async () => {
   
     if (note) {
       try {
-        const response = await fetch('/api/notes', {
+        const response = await fetch('http://localhost:3000/api/notes', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -29,7 +29,7 @@ document.getElementById('save-note').addEventListener('click', async () => {
   
   document.getElementById('list-notes').addEventListener('click', async () => {
     try {
-      const response = await fetch('/api/notes');
+      const response = await fetch('http://localhost:3000/api/notes');
       const notes = await response.json();
   
       const notesList = document.getElementById('notes-list');
@@ -50,7 +50,7 @@ document.getElementById('save-note').addEventListener('click', async () => {
           const id = e.target.dataset.id;
   
           try {
-            const response = await fetch(`/api/notes/${id}`, {
+            const response = await fetch(`http://localhost:3000/api/notes/${id}`, {
               method: 'DELETE'
             });
   

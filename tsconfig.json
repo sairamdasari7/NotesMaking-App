@@ -9,7 +9,7 @@
     "rootDir": "./src",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "noEmit": true
   },
   "include": ["src"],
